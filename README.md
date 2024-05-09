@@ -1,33 +1,32 @@
-# MouseHook
+# Sidecar for Android & Mac
 
-<img src="Media/mousehook-icon-1024x1024.png" width="256">
+Use Parsec, BetterDisplay and MouseHook to build your own portable "one more screen".
+Tested on MacOS Sonoma. 
+Latency is very low if you're in a local network. Otherwise you can also tether.
 
-MouseHook is an open source macOS app written in Swift that allows you to hook a duplicate mouse cursor to your mouse's location and have it mimic the appearance of your mouse. This is especially useful for fixing the annoying issue where Parsec doesn't show the host mouse when using it as a monitor extender.
+## BetterDisplay:
+Project Download:
+https://github.com/waydabber/BetterDisplay/releases
 
-Please note that MouseHook has only been developed and tested in my personal environment and I cannot provide any guarantees that it will work in other environments. Use at your own risk.
+Better Display can create a virtual screen that supports retina resolution and suits your own device's screen ratio. It is much better than Parsec's bad implementation of virtual screen. 
+And the features that we would be needing are free. Many thanks to the owner and maintainer of this project, @waydabber.
 
-Binaries have been provided supporting Macos >= 10.15. Some language features used are not supported by older versions of Macos.
+## MouseHook:
+Parsec + Better Display can solve the issue of projecting the screen lag-free. But you would notice that you wouldn't be able to see your mouse, without our hero, MouseHook here.
+I don't own this app and it's written by @brgj. Original project link is here: https://github.com/brgj/MouseHook
+Many thanks @Brgj for sovling this issue!
 
-## Installation
+## Parsec:
+Simply download and install Parsec on your Mac and Android device.
 
-To install MouseHook, download the latest release from the releases page and drag the app to your Applications folder. You may have to allow unsigned applications in `Security and Privacy`.
 
-Alternatively, you can clone the repository and build the app from source:
+# Setup and usage
 
-```
-git clone https://github.com/brgj/MouseHook.git
-cd MouseHook
-xcodebuild
-```
+- add a virtual screen in your BetterDisplay app. If you're using foldable devices, you can add a 4:3 screen. BD allows you to create custom virtual screen during your Pro license trial. You can disable license features afterwards but BD wouldn't remove your already added virtual screen. However, I strongly suggest you to donate/buy this app.
+- set up MouseHook and enable it on the virtual screen. Simply click it's menubar icon and make sure the virtual screen has a tick on it.
+- In Parsec Mac, start to share your screen.
+- On Parsec Android, connect to your Mac, and click on the Parsec icon to switch to the correct display (virtual display).
+- There's a bug on Parsec Android relating to its Vulkan renderer. You might see a green screen after switching virtual display, but that's normal. Simply disable Vulkan renderer, and restart it, then everything should be fine.
+- Vulkan renderer is strongly suggested because it has a much lower latency.
 
-## Usage
 
-To use MouseHook, simply launch the app and click the app icon in the menu bar. Any monitors currently allowing mousehook functionality will appear with a ✅ and ones that are disabled will appear with an ❌. By clicking the monitor label, it will toggle functionality for that monitor. Monitors are disabled by default.
-
-### Demo
-
-![Demo](Media/mousehook-demo.gif)
-
-## License
-
-MouseHook is licensed under the Apache License v2.
