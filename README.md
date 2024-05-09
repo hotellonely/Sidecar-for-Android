@@ -1,4 +1,4 @@
-# Sidecar for Android & Mac
+# Sidecar for Android & Mac Guide
 
 Use Parsec, BetterDisplay and MouseHook to build your own portable "one more screen".
 Tested on MacOS Sonoma. 
@@ -29,4 +29,5 @@ Simply download and install Parsec on your Mac and Android device.
 - There's a bug on Parsec Android relating to its Vulkan renderer. You might see a green screen after switching virtual display, but that's normal. Simply disable Vulkan renderer, and restart it, then everything should be fine.
 - Vulkan renderer is strongly suggested because it has a much lower latency.
 
-
+# Example and Video Guide
+- coming soon if i have nothing else to do.
